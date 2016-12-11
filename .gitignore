@@ -9,7 +9,6 @@
 *.class
 .gradle
 local.properties
-app/*
 build/*
 
 # generated files

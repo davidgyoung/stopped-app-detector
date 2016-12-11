@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/activity_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.davidgyoungtech.stoppedappdetector.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:text="This app lists all installed apps that are in a 'stopped' state, those that have never been manually launched, or were force stopped in Settings -> Applications.  On some non-standard ROMs, apps are put into a stopped state by swiping them off the screen from the task switcher.  You may test if this is such a ROM by launching your app, swiping it off the screen with the task switcher, and checking to see if it gets added to the list below."/>
+
+    <ScrollView
+        android:background="#CCCCCC"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <TextView
+            android:id="@+id/stopped_app_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Processing..."/>
+    </ScrollView>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="refresh"
+        android:text="Refresh"/>
+
+
+</LinearLayout>
+
